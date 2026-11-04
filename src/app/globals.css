@@ -1,0 +1,301 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0d253f;
+  --color-deep: #071524;
+  --color-dawn: #f97316;
+  --color-dawn-strong: #ea580c;
+  --color-dawn-ink: #c2410c;
+  --color-sand: #fbf9f3;
+  --color-line: #e2e8f0;
+  --color-sea-green: #10b981;
+  --color-green-ink: #047857;
+  --color-ink: #0f1e2e;
+  --color-muted: #52627a;
+  --font-display: var(--font-oswald), var(--font-tamil), "Arial Narrow", sans-serif;
+  --font-sans: var(--font-jakarta), var(--font-tamil), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+  scrollbar-color: #0d253f #fbf9f3;
+}
+
+body {
+  background: var(--color-sand);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #f97316;
+  color: #071524;
+}
+
+:focus-visible {
+  outline: 3px solid #f97316;
+  outline-offset: 2px;
+}
+
+button:not(:disabled),
+select {
+  cursor: pointer;
+}
+
+@layer components {
+  .btn {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.375rem;
+    padding-inline: 1rem;
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: background-color 160ms ease-out, transform 160ms ease-out;
+  }
+  .btn:active:not(:disabled) {
+    transform: translateY(1px);
+  }
+  .btn:disabled {
+    opacity: 0.8;
+  }
+  .btn-dawn {
+    background: var(--color-dawn);
+    color: var(--color-deep);
+  }
+  .btn-dawn:hover:not(:disabled) {
+    background: #fb8a3c;
+  }
+  .btn-green {
+    background: var(--color-sea-green);
+    color: var(--color-deep);
+  }
+  .btn-green:hover {
+    background: #34d399;
+  }
+  .btn-navy {
+    background: var(--color-navy);
+    color: #fff;
+  }
+  .btn-navy:hover {
+    background: #173a5e;
+  }
+  .btn-outline {
+    border: 2px solid var(--color-navy);
+    color: var(--color-navy);
+  }
+  .btn-outline:hover {
+    background: #fff;
+  }
+
+  .tag {
+    border-radius: 0.2rem;
+    padding: 0.15rem 0.45rem;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .field-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-muted);
+  }
+  .field {
+    display: block;
+    width: 100%;
+    height: 2.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid #b6c2d0;
+    border-radius: 0.375rem;
+    background: #fff;
+    padding-inline: 0.625rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-ink);
+  }
+  .field[aria-invalid="true"] {
+    border-color: var(--color-dawn-ink);
+    box-shadow: inset 0 0 0 1px var(--color-dawn-ink);
+  }
+  .field-error {
+    display: block;
+    margin-top: 0.25rem;
+    font-weight: 500;
+    color: #b02a0a;
+  }
+
+  .stepper {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #b6c2d0;
+    border-radius: 0.375rem;
+  }
+  .stepper button {
+    display: grid;
+    width: 2.25rem;
+    height: 2.25rem;
+    place-items: center;
+    border-radius: 0.3rem;
+  }
+  .stepper button:hover:not(:disabled) {
+    background: #eef2f6;
+  }
+  .stepper button:disabled {
+    opacity: 0.35;
+  }
+  .stepper output {
+    min-width: 3.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .tab,
+  .chip {
+    flex-shrink: 0;
+    white-space: nowrap;
+    border-radius: 0.375rem;
+    transition: background-color 160ms ease-out;
+  }
+  .tab {
+    padding: 0.5rem 0.875rem;
+    background: #eae5d8;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  .tab:hover {
+    background: #dfd9c8;
+  }
+  .tab-active,
+  .tab-active:hover {
+    background: var(--color-navy);
+    color: #fff;
+  }
+  .chip {
+    border: 1px solid #b6c2d0;
+    padding: 0.3rem 0.75rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+  }
+  .chip:hover {
+    background: #fff;
+  }
+  .chip-active,
+  .chip-active:hover {
+    border-color: var(--color-dawn);
+    background: var(--color-dawn);
+    color: var(--color-deep);
+  }
+
+  .beacon {
+    position: relative;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 50%;
+    background: var(--color-sea-green);
+    animation: beacon 1.8s ease-out infinite;
+  }
+  .beacon-off {
+    background: #f87171;
+    animation: none;
+  }
+
+  .run-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border-radius: 0.5rem;
+    background: #d1fae5;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    color: #064e3b;
+    animation: rise 320ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .drawer {
+    width: 100%;
+    max-width: 28rem;
+    height: 100dvh;
+    max-height: none;
+    margin: 0 0 0 auto;
+    overflow: hidden;
+  }
+  .drawer[open] {
+    animation: slide-in 320ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .modal {
+    width: calc(100% - 2rem);
+    max-width: 34rem;
+    margin: auto;
+    border-radius: 0.5rem;
+  }
+  .modal[open] {
+    animation: rise 320ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .drawer::backdrop,
+  .modal::backdrop {
+    background: rgb(7 21 36 / 0.65);
+  }
+
+  .dawn-pop {
+    animation: pop 480ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+
+  @media (max-width: 1279px) {
+    .ticker-track {
+      animation: ticker 32s linear infinite;
+    }
+    .ticker:hover .ticker-track {
+      animation-play-state: paused;
+    }
+  }
+}
+
+@keyframes beacon {
+  0% { box-shadow: 0 0 0 0 rgb(16 185 129 / 0.7); }
+  100% { box-shadow: 0 0 0 10px rgb(16 185 129 / 0); }
+}
+@keyframes ticker {
+  to { transform: translateX(-50%); }
+}
+@keyframes slide-in {
+  from { transform: translateX(100%); }
+}
+@keyframes rise {
+  from { opacity: 0; translate: 0 1rem; }
+}
+@keyframes pop {
+  from { opacity: 0; transform: scale(0.6); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after,
+  ::backdrop {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .ticker {
+    overflow-x: auto;
+  }
+}
