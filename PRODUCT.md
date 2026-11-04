@@ -10,6 +10,10 @@ web
 
 Next.js (App Router), TypeScript, Tailwind CSS, Zustand, Lucide icons. Chosen by the user from the blueprint's options.
 
+## Hosting
+
+GitHub Pages at https://kaleemfairy.github.io/KasimeduCatch/, deployed by `.github/workflows/deploy.yml` on each push to `main`. Static export only, so no server code or API routes.
+
 ## Users
 
 Chennai households buying fish for the day's cooking, often on a phone in the early morning. They know their fish by Tamil name and care about freshness, how it will be cut and how much they get after cleaning.

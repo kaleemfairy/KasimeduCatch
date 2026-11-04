@@ -3,7 +3,7 @@
 import { MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import { CATEGORIES } from "@/lib/catalog";
-import { PHOTO_CREDITS, SITE } from "@/lib/site";
+import { asset, PHOTO_CREDITS, SITE } from "@/lib/site";
 import { scrollToSection, useStore } from "@/lib/store";
 import { whatsappLink } from "@/lib/whatsapp";
 
@@ -15,7 +15,7 @@ export function Footer() {
     <footer className="bg-deep text-[#C4D1DE]">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 text-sm sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Image src="/images/sss-seafood-logo.png" alt="SSS Seafood, Kasimedu Catch" width={533} height={527} className="size-40" />
+          <Image src={asset("/images/sss-seafood-logo.png")} alt="SSS Seafood, Kasimedu Catch" width={533} height={527} className="size-40" />
           <p className="mt-3">Kasimedu Catch, Chennai</p>
           <p className="mt-2 tabular-nums">FSSAI License No. {SITE.fssai}</p>
         </div>

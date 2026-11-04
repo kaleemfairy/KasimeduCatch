@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { getItem, rupees } from "@/lib/catalog";
 import { CLOCK_END, CLOCK_START, CLOCK_STOPS, SLOTS, type DockNow, type SlotId, useDockNow } from "@/lib/dock";
-import { ZONES } from "@/lib/site";
+import { asset, ZONES } from "@/lib/site";
 import { scrollToSection, useStore } from "@/lib/store";
 
 const prawn = getItem("prawn");
@@ -93,7 +93,7 @@ export function Hero() {
   return (
     <section id="top" className="relative isolate overflow-hidden bg-navy text-white">
       <Image
-        src="/photos/kasimedu-boats.jpg"
+        src={asset("/photos/kasimedu-boats.jpg")}
         alt="Fishing boats moored at Kasimedu harbour"
         fill
         priority
@@ -145,10 +145,10 @@ export function Hero() {
           <article className="overflow-hidden rounded-lg bg-deep shadow-[0_18px_40px_rgb(7_21_36/0.5)] lg:col-span-5">
             <div className="relative grid grid-cols-2 bg-white">
               <div className="relative aspect-[4/3]">
-                <Image src="/images/menu/prawn.png" alt="Raw prawns" fill sizes="(min-width: 1024px) 20vw, 50vw" className="object-cover" />
+                <Image src={asset("/images/menu/prawn.png")} alt="Raw prawns" fill sizes="(min-width: 1024px) 20vw, 50vw" className="object-cover" />
               </div>
               <div className="relative aspect-[4/3]">
-                <Image src="/images/menu/crab.png" alt="Blue crab" fill sizes="(min-width: 1024px) 20vw, 50vw" className="object-cover" />
+                <Image src={asset("/images/menu/crab.png")} alt="Blue crab" fill sizes="(min-width: 1024px) 20vw, 50vw" className="object-cover" />
               </div>
               <p className="tag absolute top-3 left-3 bg-deep text-white">{dock && !dock.hasCatch ? "Lands around 4:15 AM" : "Landed 4:15 AM Today"}</p>
             </div>

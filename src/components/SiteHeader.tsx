@@ -4,7 +4,7 @@ import { MessageCircle, Phone, ShoppingBasket } from "lucide-react";
 import Image from "next/image";
 import { CATALOG, CATEGORIES, type CategoryId } from "@/lib/catalog";
 import { useDockNow } from "@/lib/dock";
-import { SITE } from "@/lib/site";
+import { asset, SITE } from "@/lib/site";
 import { scrollToSection, useStore } from "@/lib/store";
 import { whatsappLink } from "@/lib/whatsapp";
 import { CatchSearch } from "./CatchSearch";
@@ -62,7 +62,7 @@ export function SiteHeader() {
       <header className="sticky top-0 z-30 bg-navy text-white shadow-[0_6px_20px_rgb(7_21_36/0.35)]">
         <div className="mx-auto flex max-w-7xl items-center gap-5 px-4 py-1.5">
           <a href="#top" className="mr-auto flex items-center gap-2.5 lg:mr-0">
-            <Image src="/images/sss-seafood-logo.png" alt="" width={533} height={527} priority className="size-14 shrink-0 lg:size-16" />
+            <Image src={asset("/images/sss-seafood-logo.png")} alt="" width={533} height={527} priority className="size-14 shrink-0 lg:size-16" />
             <span className="leading-tight">
               <span className="block font-display text-xl font-semibold tracking-wide">SSS SEAFOOD</span>
               <span className="block text-[11px] font-semibold tracking-[0.08em] text-dawn">KASIMEDU CATCH</span>

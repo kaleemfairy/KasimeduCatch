@@ -7,6 +7,9 @@ export const SITE = {
   households: "12,000+",
 };
 
+/** Public file path, including the folder the site is hosted under. */
+export const asset = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${path}`;
+
 export const ZONES = [
   "Anna Nagar & Kilpauk",
   "Adyar & Besant Nagar",

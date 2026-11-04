@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { getItem, kg } from "@/lib/catalog";
 import { getSlot, SLOTS, type SlotId } from "@/lib/dock";
-import { SITE, TESTIMONIALS, ZONES } from "@/lib/site";
+import { asset, SITE, TESTIMONIALS, ZONES } from "@/lib/site";
 import { useStore } from "@/lib/store";
 import { dispatchMessage, isIndianMobile, whatsappLink } from "@/lib/whatsapp";
 
@@ -130,7 +130,7 @@ export function PreOrder() {
 
       <section id="about" className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-14 lg:grid-cols-2">
         <Image
-          src="/photos/kasimedu-basket.jpg"
+          src={asset("/photos/kasimedu-basket.jpg")}
           alt="A man rinsing a woven fish basket in the shallows at Kasimedu, painted boats behind him"
           width={1400}
           height={944}
