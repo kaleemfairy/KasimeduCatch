@@ -1,6 +1,6 @@
 "use client";
 
-import { MessageCircle, Snowflake, Trash2, X } from "lucide-react";
+import { Snowflake, Trash2, X } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { getItem, netYield, rupees } from "@/lib/catalog";
 import { getSlot } from "@/lib/dock";
@@ -8,6 +8,7 @@ import { basketTotals, scrollToSection, useStore } from "@/lib/store";
 import { basketMessage, whatsappLink } from "@/lib/whatsapp";
 import { CatchImage } from "./CatchImage";
 import { Stepper } from "./Stepper";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 export function BasketDrawer() {
   const open = useStore((s) => s.basketOpen);
@@ -120,7 +121,7 @@ export function BasketDrawer() {
               rel="noreferrer"
               className="btn btn-dawn mt-3 h-12 w-full text-base"
             >
-              <MessageCircle size={18} aria-hidden="true" /> Instant WhatsApp Order
+              <WhatsAppIcon size={20} /> Instant WhatsApp Order
             </a>
             <button type="button" onClick={proceed} className="btn btn-outline mt-2 w-full">Proceed to Dock Dispatch</button>
           </footer>

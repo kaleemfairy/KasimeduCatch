@@ -80,6 +80,14 @@ select {
   .btn-green:hover {
     background: #34d399;
   }
+  /* WhatsApp's own green, with a dark label so the text stays readable. */
+  .btn-whatsapp {
+    background: #25d366;
+    color: #052e16;
+  }
+  .btn-whatsapp:hover {
+    background: #1ebe5a;
+  }
   .btn-navy {
     background: var(--color-navy);
     color: #fff;

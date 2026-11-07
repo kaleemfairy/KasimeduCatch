@@ -1,6 +1,6 @@
 "use client";
 
-import { MessageCircle, Phone, ShoppingBasket, Truck } from "lucide-react";
+import { Phone, ShoppingBasket, Truck } from "lucide-react";
 import Image from "next/image";
 import { CATALOG, CATEGORIES, type CategoryId } from "@/lib/catalog";
 import { useDockNow } from "@/lib/dock";
@@ -8,6 +8,7 @@ import { asset, SITE } from "@/lib/site";
 import { scrollToSection, useStore } from "@/lib/store";
 import { whatsappLink } from "@/lib/whatsapp";
 import { CatchSearch } from "./CatchSearch";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 export function SiteHeader() {
   const dock = useDockNow();
@@ -79,9 +80,9 @@ export function SiteHeader() {
               target="_blank"
               rel="noreferrer"
               aria-label="Order on WhatsApp"
-              className="btn btn-green px-3"
+              className="btn btn-whatsapp px-3"
             >
-              <MessageCircle size={18} aria-hidden="true" />
+              <WhatsAppIcon size={20} className="text-white" />
               <span className="hidden sm:inline">WhatsApp Order</span>
             </a>
             <button type="button" onClick={() => setBasketOpen(true)} className="btn btn-dawn px-3" aria-label={`Open basket, ${lineCount} items`}>

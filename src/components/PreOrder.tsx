@@ -1,6 +1,6 @@
 "use client";
 
-import { CircleCheck, MessageCircle } from "lucide-react";
+import { CircleCheck } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { getItem, kg } from "@/lib/catalog";
@@ -8,6 +8,7 @@ import { getSlot, SLOTS, type SlotId } from "@/lib/dock";
 import { asset, SITE, TESTIMONIALS, ZONES } from "@/lib/site";
 import { useStore } from "@/lib/store";
 import { dispatchMessage, isIndianMobile, whatsappLink } from "@/lib/whatsapp";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 type Errors = Partial<Record<"name" | "phone" | "address", string>>;
 
@@ -68,7 +69,7 @@ export function PreOrder() {
               <CircleCheck size={56} aria-hidden="true" className="dawn-pop mx-auto text-sea-green" />
               <h3 className="mt-3 font-display text-3xl font-semibold uppercase">Your dispatch slip is ready</h3>
               <a href={link} target="_blank" rel="noreferrer" className="btn btn-dawn mt-4 h-12 w-full text-base">
-                <MessageCircle size={18} aria-hidden="true" /> Send to Dock on WhatsApp
+                <WhatsAppIcon size={20} /> Send to Dock on WhatsApp
               </a>
               <p className="mt-2 text-xs text-muted">Your order reaches the dock when you press send in WhatsApp.</p>
               <button type="button" onClick={() => setLink(null)} className="mt-3 text-sm font-semibold underline underline-offset-2">Edit details</button>

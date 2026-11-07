@@ -1,11 +1,12 @@
 "use client";
 
-import { Banknote, Camera, CircleCheck, FlaskConical, MessageCircle, X } from "lucide-react";
+import { Banknote, Camera, CircleCheck, FlaskConical, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { CATALOG, getItem } from "@/lib/catalog";
 import { readDock } from "@/lib/dock";
 import { useStore } from "@/lib/store";
 import { dawnMessage, isIndianMobile, whatsappLink } from "@/lib/whatsapp";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const VARIETIES = CATALOG;
 const TRUST = [
@@ -110,7 +111,7 @@ export function DawnModal() {
               <strong className="block font-display text-2xl font-semibold tabular-nums">{confirmation.landing}</strong>
             </p>
             <a href={confirmation.link} target="_blank" rel="noreferrer" className="btn btn-dawn mt-4 h-12 w-full text-base">
-              <MessageCircle size={18} aria-hidden="true" /> Send to Dock on WhatsApp
+              <WhatsAppIcon size={20} /> Send to Dock on WhatsApp
             </a>
             <p className="mt-2 text-xs text-muted">Your order reaches the dock when you press send in WhatsApp.</p>
           </div>
