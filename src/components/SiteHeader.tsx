@@ -28,7 +28,7 @@ export function SiteHeader() {
       ? `Next Landing ${dock.nextLanding}`
       : "Morning Harbour Catch Arrived (4:00 AM Today)",
     "100% Formalin & Preservative Free",
-    "Chennai Express 90-Min Delivery",
+    "FREE Home Delivery across Chennai",
   ];
 
   return (

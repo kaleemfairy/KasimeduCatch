@@ -8,8 +8,6 @@ import { ZONES } from "./site";
 
 export const WEIGHT_STEP = 0.5;
 export const MAX_WEIGHT = 20;
-export const FREE_DISPATCH_ABOVE = 999;
-export const DISPATCH_FEE = 50;
 
 export type BasketLine = { itemId: string; cutIndex: number; weight: number };
 
@@ -114,8 +112,8 @@ export function basketTotals(lines: BasketLine[]) {
     const item = CATALOG.find((i) => i.id === line.itemId);
     return sum + (item ? item.price * line.weight : 0);
   }, 0);
-  const dispatch = subtotal === 0 || subtotal > FREE_DISPATCH_ABOVE ? 0 : DISPATCH_FEE;
-  return { subtotal, dispatch, total: subtotal + dispatch };
+  // Home delivery is free, so the total is the catch alone.
+  return { subtotal, total: subtotal };
 }
 
 export function scrollToSection(id: string) {

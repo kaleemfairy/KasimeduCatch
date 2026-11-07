@@ -237,6 +237,23 @@ export const CATALOG: CatchItem[] = [
     ],
   },
   {
+    id: "paal-sura",
+    name: "Paal Sura (White Shark)",
+    tamilName: "பால் சுறா",
+    subtitle: "White Shark / Sura Puttu Special",
+    tag: "PUTTU SPECIAL",
+    boat: "Kasimedu Market",
+    // Placeholder: the client has not confirmed this price yet.
+    price: 520,
+    category: "fish",
+    art: "cobia",
+    image: "/images/menu/paal-sura.jpg",
+    cuts: [
+      cut("Steaks / Slices (Fry Cut)", "steak", NET.fish),
+      cut("Puttu Pieces (Skin Removed)", "steak", NET.fish),
+    ],
+  },
+  {
     id: "prawn-50-55",
     name: "Prawn (50–55 count)",
     tamilName: "இறால்",

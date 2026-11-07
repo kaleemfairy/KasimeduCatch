@@ -4,7 +4,7 @@ import { MessageCircle, Snowflake, Trash2, X } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { getItem, netYield, rupees } from "@/lib/catalog";
 import { getSlot } from "@/lib/dock";
-import { basketTotals, FREE_DISPATCH_ABOVE, scrollToSection, useStore } from "@/lib/store";
+import { basketTotals, scrollToSection, useStore } from "@/lib/store";
 import { basketMessage, whatsappLink } from "@/lib/whatsapp";
 import { CatchImage } from "./CatchImage";
 import { Stepper } from "./Stepper";
@@ -18,7 +18,7 @@ export function BasketDrawer() {
   const setWeight = useStore((s) => s.setWeight);
   const removeLine = useStore((s) => s.removeLine);
   const ref = useRef<HTMLDialogElement>(null);
-  const { subtotal, dispatch, total } = basketTotals(lines);
+  const { subtotal, total } = basketTotals(lines);
 
   useEffect(() => {
     const dialog = ref.current;
@@ -105,13 +105,10 @@ export function BasketDrawer() {
               <div className="flex justify-between"><dt>Subtotal</dt><dd className="font-semibold">{rupees(subtotal)}</dd></div>
               <div className="flex justify-between text-green-ink"><dt>Dock Cleaning &amp; Master Butchery</dt><dd className="font-semibold">FREE (₹0)</dd></div>
               <div className="flex justify-between text-green-ink"><dt>Food-Grade RO Ice Insulation</dt><dd className="font-semibold">FREE (₹0)</dd></div>
-              <div className={`flex justify-between ${dispatch ? "" : "text-green-ink"}`}>
-                <dt>Chennai Cold-Chain Dispatch</dt>
-                <dd className="font-semibold">{dispatch ? rupees(dispatch) : "FREE"}</dd>
+              <div className="flex justify-between text-green-ink">
+                <dt className="font-semibold">Home Delivery across Chennai</dt>
+                <dd className="font-bold">FREE</dd>
               </div>
-              {dispatch > 0 && (
-                <p className="text-xs text-muted">Free dispatch above {rupees(FREE_DISPATCH_ABOVE)}.</p>
-              )}
               <div className="flex items-baseline justify-between border-t border-line pt-2">
                 <dt className="font-semibold">Total Amount</dt>
                 <dd className="font-display text-2xl font-semibold">{rupees(total)}</dd>

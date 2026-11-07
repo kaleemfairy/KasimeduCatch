@@ -1,6 +1,6 @@
 "use client";
 
-import { Search } from "lucide-react";
+import { Search, Truck } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { CATALOG, rupees } from "@/lib/catalog";
@@ -121,6 +121,13 @@ export function Hero() {
               }}
               className="mt-6 grid max-w-2xl gap-3 rounded-lg bg-white p-4 text-ink shadow-[0_18px_40px_rgb(7_21_36/0.4)] sm:grid-cols-2"
             >
+              <p className="flex items-center gap-2.5 rounded-md bg-[#D1FAE5] px-3 py-2.5 text-[#064E3B] sm:col-span-2">
+                <Truck size={22} aria-hidden="true" className="shrink-0" />
+                <span>
+                  <strong className="font-display text-lg tracking-wide uppercase">Free home delivery</strong>
+                  <span className="block text-sm">On every order, across Chennai.</span>
+                </span>
+              </p>
               <label className="field-label">
                 Select Delivery Zone
                 <select value={zone} onChange={(e) => setZone(e.target.value)} className="field">

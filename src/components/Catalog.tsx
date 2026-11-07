@@ -66,7 +66,8 @@ function CatchCard({ item, highlighted }: { item: CatchItem; highlighted: boolea
         <label className="field-label mt-auto">
           <span className="flex items-center gap-1.5">
             Cut Style
-            <CutPhoto kind={cut.kind} className="h-5 w-7" />
+            {/* The cut photos show fish, so prawns, squid and crabs go without. */}
+            {(item.category === "fish" || item.category === "boneless") && <CutPhoto kind={cut.kind} className="h-5 w-7" />}
           </span>
           <select value={cutIndex} onChange={(e) => setPicked(Number(e.target.value))} className="field text-[13px]">
             {item.cuts.map((c, index) => <option key={c.name} value={index}>{c.name}</option>)}

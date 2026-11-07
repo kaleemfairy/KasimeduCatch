@@ -34,7 +34,7 @@ Fish bought off the boat at Kasimedu at 4 AM, cut to order and sold by gross wei
 
 ## Capabilities and Constraints
 
-- Basket, cut selection, net yield, weight stepper, delivery fee (₹50, free above ₹999).
+- Basket, cut selection, net yield, weight stepper. Home delivery across Chennai is free on every order, at the client's request.
 - Dawn Auction and pre-order forms validate, confirm, and open WhatsApp.
 - No live stock feed exists. Stock, boat numbers and landing times are static seed data.
 
@@ -51,7 +51,7 @@ All placeholders, per the user, until replaced before launch. They live in `src/
 
 - FSSAI licence number and wharf address. The phone and WhatsApp number (+91 90809 14945) is real, from the client's menu poster.
 - "12,000+ households", the formalin test figure.
-- Item names and prices are real: the client's menu text and poster (26 items, in tabs for Sea Fish, Prawns & Shrimps, Crab, Squid and Boneless Fillet, each with its Tamil name). No MRPs were supplied, so none are shown. On hold until the client confirms: Aila (no price), Kadaveral (no price), White Shark (species and legality). Their source images are in `Images/`.
+- Item names and prices are real: the client's menu text and poster (26 items, in tabs for Sea Fish, Prawns & Shrimps, Crab, Squid and Boneless Fillet, each with its Tamil name). No MRPs were supplied, so none are shown. On hold until the client confirms: Aila (no price) and Kadaveral (no price). Paal Sura (White Shark) is listed at a placeholder ₹520/kg until the client confirms the price. Their source images are in `Images/`.
 - Testimonials, which are labelled as samples on the page.
 - Net yields are the client's: fish 700-750g, prawn 450-500g, squid 600-650g, crab 550-650g per kg, the same for every cut; boneless items are ready meat. Tags, cut options and landing times are still placeholders.
 - Menu images: from the client, in `Images/`, served from `public/images/menu/`. Several are reused for close matches (prawn image for all 4 sizes, Chinese pomfret image for White Vavval, Parala image for Parala boneless). Every item now has a client image; Thuna Cubes & Slices reuses the Yellowfin Tuna image. Curry Cut still has no cut photo. The hero background is a CC BY-SA photo of Kasimedu, credited in the footer.

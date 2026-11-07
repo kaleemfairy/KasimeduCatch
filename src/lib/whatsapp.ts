@@ -17,8 +17,8 @@ function orderLines(lines: BasketLine[]) {
 }
 
 function totalLines(lines: BasketLine[]) {
-  const { dispatch, total } = basketTotals(lines);
-  return [...(dispatch ? [`Chennai Dispatch: ${rupees(dispatch)}`] : []), `*Total: ${rupees(total)}*`];
+  const { total } = basketTotals(lines);
+  return ["Home Delivery: FREE", `*Total: ${rupees(total)}*`];
 }
 
 export function basketMessage(lines: BasketLine[], zone: string, slot: string) {
