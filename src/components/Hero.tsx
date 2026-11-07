@@ -118,9 +118,9 @@ export function Hero() {
               <Truck size={34} aria-hidden="true" className="neon-text neon-truck shrink-0" />
               <span>
                 <strong className="neon-text block font-display text-[clamp(1.5rem,3vw,2rem)] leading-none font-bold tracking-wide uppercase">
-                  Free Home Delivery
+                  Free Delivery &amp; Cleaning
                 </strong>
-                <span className="mt-1 block text-sm font-medium text-[#D1FAE5]">On every order, anywhere in Chennai. No delivery charge.</span>
+                <span className="mt-1 block text-sm font-medium text-[#D1FAE5]">No delivery or cleaning charges. On every order, anywhere in Chennai.</span>
               </span>
             </p>
 
