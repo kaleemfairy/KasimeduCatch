@@ -18,7 +18,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5.5rem;
+  scroll-padding-top: 7.5rem;
   scrollbar-color: #0d253f #fbf9f3;
 }
 
@@ -251,6 +251,43 @@ select {
     background: rgb(7 21 36 / 0.65);
   }
 
+  .neon-text {
+    color: #86efac;
+    text-shadow:
+      0 0 4px rgb(52 211 153 / 0.9),
+      0 0 14px rgb(16 185 129 / 0.8),
+      0 0 28px rgb(16 185 129 / 0.5);
+  }
+  .neon-box {
+    border: 2px solid #34d399;
+    border-radius: 0.5rem;
+    background: rgb(6 78 59 / 0.45);
+    box-shadow:
+      0 0 10px rgb(52 211 153 / 0.6),
+      0 0 28px rgb(16 185 129 / 0.35),
+      inset 0 0 12px rgb(52 211 153 / 0.25);
+    animation: neon-pulse 2.4s ease-in-out infinite;
+  }
+  .neon-truck {
+    animation: truck-drive 1.6s ease-in-out infinite;
+  }
+  .free-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-top: 1px solid rgb(52 211 153 / 0.45);
+    background: #071524;
+    padding: 0.35rem 1rem;
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #86efac;
+    box-shadow: inset 0 -1px 8px rgb(16 185 129 / 0.25);
+  }
+
   .dawn-pop {
     animation: pop 480ms cubic-bezier(0.16, 1, 0.3, 1);
   }
@@ -269,6 +306,17 @@ select {
   }
 }
 
+@keyframes neon-pulse {
+  50% {
+    box-shadow:
+      0 0 16px rgb(52 211 153 / 0.85),
+      0 0 44px rgb(16 185 129 / 0.55),
+      inset 0 0 16px rgb(52 211 153 / 0.35);
+  }
+}
+@keyframes truck-drive {
+  50% { transform: translateX(3px); }
+}
 @keyframes beacon {
   0% { box-shadow: 0 0 0 0 rgb(16 185 129 / 0.7); }
   100% { box-shadow: 0 0 0 10px rgb(16 185 129 / 0); }

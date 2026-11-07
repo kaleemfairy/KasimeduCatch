@@ -114,20 +114,23 @@ export function Hero() {
               Bought off the deep-sea trawlers at dawn, washed in RO water, cut to your order by our butchers, and delivered across Chennai within hours.
             </p>
 
+            <p className="neon-box mt-6 flex max-w-2xl items-center gap-3 px-4 py-3">
+              <Truck size={34} aria-hidden="true" className="neon-text neon-truck shrink-0" />
+              <span>
+                <strong className="neon-text block font-display text-[clamp(1.5rem,3vw,2rem)] leading-none font-bold tracking-wide uppercase">
+                  Free Home Delivery
+                </strong>
+                <span className="mt-1 block text-sm font-medium text-[#D1FAE5]">On every order, anywhere in Chennai. No delivery charge.</span>
+              </span>
+            </p>
+
             <form
               onSubmit={(e) => {
                 e.preventDefault();
                 findCatch();
               }}
-              className="mt-6 grid max-w-2xl gap-3 rounded-lg bg-white p-4 text-ink shadow-[0_18px_40px_rgb(7_21_36/0.4)] sm:grid-cols-2"
+              className="mt-4 grid max-w-2xl gap-3 rounded-lg bg-white p-4 text-ink shadow-[0_18px_40px_rgb(7_21_36/0.4)] sm:grid-cols-2"
             >
-              <p className="flex items-center gap-2.5 rounded-md bg-[#D1FAE5] px-3 py-2.5 text-[#064E3B] sm:col-span-2">
-                <Truck size={22} aria-hidden="true" className="shrink-0" />
-                <span>
-                  <strong className="font-display text-lg tracking-wide uppercase">Free home delivery</strong>
-                  <span className="block text-sm">On every order, across Chennai.</span>
-                </span>
-              </p>
               <label className="field-label">
                 Select Delivery Zone
                 <select value={zone} onChange={(e) => setZone(e.target.value)} className="field">

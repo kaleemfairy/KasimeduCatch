@@ -1,6 +1,6 @@
 "use client";
 
-import { MessageCircle, Phone, ShoppingBasket } from "lucide-react";
+import { MessageCircle, Phone, ShoppingBasket, Truck } from "lucide-react";
 import Image from "next/image";
 import { CATALOG, CATEGORIES, type CategoryId } from "@/lib/catalog";
 import { useDockNow } from "@/lib/dock";
@@ -91,6 +91,11 @@ export function SiteHeader() {
             </button>
           </div>
         </div>
+        <p className="free-strip">
+          <Truck size={16} aria-hidden="true" className="neon-truck shrink-0" />
+          <span className="neon-text">Free home delivery across Chennai</span>
+          <span className="hidden text-[#D1FAE5] sm:inline">• On every order</span>
+        </p>
       </header>
 
       <div className="relative z-20 bg-navy text-white">
