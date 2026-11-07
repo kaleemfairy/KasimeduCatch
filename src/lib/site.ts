@@ -1,7 +1,7 @@
 // Business facts. All of these are placeholders until the owner confirms them.
 export const SITE = {
-  phoneDisplay: "+91 98400 12345",
-  phoneE164: "919840012345",
+  phoneDisplay: "+91 90809 14945",
+  phoneE164: "919080914945",
   fssai: "12423008000456",
   address: "Wharf Gate #4, Kasimedu Fishing Harbour, Royapuram, Chennai - 600013",
   households: "12,000+",

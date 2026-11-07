@@ -3,13 +3,15 @@
 import { Search } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { getItem, rupees } from "@/lib/catalog";
+import { CATALOG, rupees } from "@/lib/catalog";
 import { CLOCK_END, CLOCK_START, CLOCK_STOPS, SLOTS, type DockNow, type SlotId, useDockNow } from "@/lib/dock";
 import { asset, ZONES } from "@/lib/site";
 import { scrollToSection, useStore } from "@/lib/store";
 
-const prawn = getItem("prawn");
-const crab = getItem("crab");
+const lowestPrice = (prefix: string) =>
+  Math.min(...CATALOG.filter((item) => item.art === prefix || item.art.endsWith(`-${prefix}`)).map((item) => item.price));
+const prawnFrom = lowestPrice("prawn");
+const crabFrom = lowestPrice("crab");
 
 const position = (minutes: number) =>
   Math.min(100, Math.max(0, ((minutes - CLOCK_START) / (CLOCK_END - CLOCK_START)) * 100));
@@ -154,13 +156,13 @@ export function Hero() {
             </div>
             <div className="p-5">
               <div className="flex items-start justify-between gap-4">
-                <h2 className="font-display text-2xl leading-tight font-semibold uppercase">Prawns &amp; Crabs (Medium Size)</h2>
+                <h2 className="font-display text-2xl leading-tight font-semibold uppercase">Prawns &amp; Crabs</h2>
                 <p className="shrink-0 text-right font-display text-3xl font-semibold text-dawn tabular-nums">
-                  {rupees(prawn?.price ?? 0)}<span className="block font-sans text-xs font-medium text-[#C4D1DE]">prawn, per kg gross</span>
+                  <span className="block font-sans text-xs font-medium text-[#C4D1DE]">prawns from</span>{rupees(prawnFrom)}<span className="block font-sans text-xs font-medium text-[#C4D1DE]">per kg gross</span>
                 </p>
               </div>
-              <p className="mt-2 text-sm text-[#6EE7B7]">Crab {rupees(crab?.price ?? 0)}/kg • Peeled &amp; deveined prawn option, ~600g net per kg</p>
-              <button type="button" onClick={() => openAuction("prawn")} className="btn btn-dawn mt-4 w-full">
+              <p className="mt-2 text-sm text-[#6EE7B7]">Crabs from {rupees(crabFrom)}/kg • 4 prawn sizes, peeled &amp; deveined on request</p>
+              <button type="button" onClick={() => openAuction("prawn-50-55")} className="btn btn-dawn mt-4 w-full">
                 Reserve 4 AM
               </button>
             </div>

@@ -7,7 +7,7 @@ import { readDock } from "@/lib/dock";
 import { useStore } from "@/lib/store";
 import { dawnMessage, isIndianMobile, whatsappLink } from "@/lib/whatsapp";
 
-const VARIETIES = CATALOG.filter((item) => item.category !== "dry");
+const VARIETIES = CATALOG;
 const TRUST = [
   { icon: Banknote, text: "No upfront advance payment required" },
   { icon: Camera, text: "Live scale photo sent via WhatsApp prior to delivery" },

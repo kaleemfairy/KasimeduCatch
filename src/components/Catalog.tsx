@@ -6,6 +6,7 @@ import { CATALOG, CATEGORIES, CUT_FILTERS, kg, netYield, rupees, type CatchItem 
 import { getSlot, useDockNow } from "@/lib/dock";
 import { useStore } from "@/lib/store";
 import { CatchImage } from "./CatchImage";
+import { CutPhoto } from "./CutPhoto";
 import { Stepper } from "./Stepper";
 
 function CatchCard({ item, highlighted }: { item: CatchItem; highlighted: boolean }) {
@@ -63,7 +64,10 @@ function CatchCard({ item, highlighted }: { item: CatchItem; highlighted: boolea
         </p>
 
         <label className="field-label mt-auto">
-          Cut Style
+          <span className="flex items-center gap-1.5">
+            Cut Style
+            <CutPhoto kind={cut.kind} className="h-5 w-7" />
+          </span>
           <select value={cutIndex} onChange={(e) => setPicked(Number(e.target.value))} className="field text-[13px]">
             {item.cuts.map((c, index) => <option key={c.name} value={index}>{c.name}</option>)}
           </select>
@@ -133,7 +137,7 @@ export function Catalog() {
             Today&apos;s Fresh Sea Catch <span lang="ta" className="block text-dawn-ink normal-case">இன்றைய மீன் வரத்து</span>
           </h2>
           <p className="mt-2 max-w-2xl text-sm text-muted">
-            Every fish is weighed whole, then cleaned, descaled and cut to your order. You pay on gross weight and see your net yield before you add it.
+            Fresh seafood is weighed whole, then cleaned and cut to your order. You pay on gross weight and see your net yield before you add it. Boneless fillets are sold as ready meat.
           </p>
         </div>
         <button type="button" onClick={() => openAuction()} className="btn btn-navy shrink-0">
@@ -158,6 +162,7 @@ export function Catalog() {
       <div role="group" aria-label="Filter by cut" className="no-scrollbar -mx-4 mt-2 flex gap-2 overflow-x-auto px-4 pb-1">
         {CUT_FILTERS.map((c) => (
           <button key={c.id} type="button" aria-pressed={cutFilter === c.id} onClick={() => setCutFilter(c.id)} className={`chip ${cutFilter === c.id ? "chip-active" : ""}`}>
+            <CutPhoto kind={c.id} />
             {c.label}
           </button>
         ))}

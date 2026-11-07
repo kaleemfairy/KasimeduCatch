@@ -49,12 +49,12 @@ Fish bought off the boat at Kasimedu at 4 AM, cut to order and sold by gross wei
 
 All placeholders, per the user, until replaced before launch. They live in `src/lib/site.ts` and `src/lib/catalog.ts`:
 
-- Phone number, FSSAI licence number, wharf address.
+- FSSAI licence number and wharf address. The phone and WhatsApp number (+91 90809 14945) is real, from the client's menu poster.
 - "12,000+ households", the formalin test figure.
-- Item names and prices are real: they come from the owner's menu (14 items). No MRPs were supplied, so none are shown. Thengaparai and Kannadiparai are described only as trevally varieties until the owner confirms the species.
+- Item names and prices are real: the client's menu text and poster (26 items, in tabs for Sea Fish, Prawns & Shrimps, Crab, Squid and Boneless Fillet, each with its Tamil name). No MRPs were supplied, so none are shown. On hold until the client confirms: Aila (no price), Kadaveral (no price), White Shark (species and legality). Their source images are in `Images/`.
 - Testimonials, which are labelled as samples on the page.
-- Boat numbers, landing times, tags, cut options and net yields.
-- Menu images: the owner's 14 images, sources in `Images/`, served from `public/images/menu/`. The hero card uses the prawn and crab images. The hero background is a CC BY-SA photo of Kasimedu, credited in the footer.
+- Net yields are the client's: fish 700-750g, prawn 450-500g, squid 600-650g, crab 550-650g per kg, the same for every cut; boneless items are ready meat. Tags, cut options and landing times are still placeholders.
+- Menu images: from the client, in `Images/`, served from `public/images/menu/`. Several are reused for close matches (prawn image for all 4 sizes, Chinese pomfret image for White Vavval, Parala image for Parala boneless). Every item now has a client image; Thuna Cubes & Slices reuses the Yellowfin Tuna image. Curry Cut still has no cut photo. The hero background is a CC BY-SA photo of Kasimedu, credited in the footer.
 
 ## Product Principles
 

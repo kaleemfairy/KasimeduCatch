@@ -3,7 +3,7 @@ import { useId } from "react";
 // Drawn stand-ins for catch photos. Swap in real dock photos when they exist.
 export type ArtId =
   | "seer" | "snapper" | "mackerel" | "anchovy" | "sole" | "cobia" | "bass" | "trevally" | "mirror"
-  | "black-pomfret" | "chinese-pomfret" | "squid" | "prawn" | "crab";
+  | "black-pomfret" | "chinese-pomfret" | "barracuda" | "tuna" | "squid" | "prawn" | "crab" | "sea-crab" | "mud-crab";
 
 type FishSpec = {
   len: number;
@@ -31,6 +31,8 @@ const FISH: Partial<Record<ArtId, FishSpec>> = {
   mirror: { len: 160, depth: 54, body: "#E6EDF0", back: "#A9BEC8", tail: 36, fork: 0.9, dorsal: 20 },
   "black-pomfret": { len: 146, depth: 62, body: "#6F7983", back: "#3A434C", tail: 36, fork: 0.85, dorsal: 16 },
   "chinese-pomfret": { len: 146, depth: 62, body: "#DDE5E9", back: "#A5B5BE", tail: 30, fork: 0.5, dorsal: 16 },
+  barracuda: { len: 252, depth: 16, body: "#CBD8CF", back: "#6E8F85", tail: 30, fork: 0.7, dorsal: 9, marks: "bars" },
+  tuna: { len: 200, depth: 40, body: "#C9D3DC", back: "#2F4A66", tail: 40, fork: 0.9, dorsal: 14 },
 };
 
 function Fish({ spec, clipId }: { spec: FishSpec; clipId: string }) {
@@ -182,6 +184,10 @@ function Art({ art, clipId }: { art: ArtId; clipId: string }) {
       return <Prawn body="#E5E3D2" band="#B9B69E" />;
     case "crab":
       return <Crab shell="#5D93C4" claw="#2F6A9F" />;
+    case "sea-crab":
+      return <Crab shell="#C9724F" claw="#94492E" />;
+    case "mud-crab":
+      return <Crab shell="#6E7350" claw="#4A4E33" />;
     default:
       return null;
   }
