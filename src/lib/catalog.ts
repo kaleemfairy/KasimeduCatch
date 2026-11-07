@@ -1,7 +1,7 @@
 import type { ArtId } from "@/components/Specimen";
 
 export type CategoryId = "fish" | "prawns" | "crabs" | "squid" | "boneless";
-export type CutKind = "whole" | "steak" | "curry" | "boneless";
+export type CutKind = "whole" | "steak" | "halved" | "boneless";
 
 export type Cut = {
   name: string;
@@ -38,7 +38,6 @@ export const CUT_FILTERS: { id: CutKind | "all"; label: string }[] = [
   { id: "all", label: "All Cuts" },
   { id: "whole", label: "Whole Fish (Cleaned)" },
   { id: "steak", label: "Steaks / Fry Cut" },
-  { id: "curry", label: "Curry Cut" },
   { id: "boneless", label: "Boneless Fillet" },
 ];
 
@@ -66,7 +65,6 @@ export const CATALOG: CatchItem[] = [
     art: "snapper",
     image: "/images/menu/sankara.png",
     cuts: [
-      cut("Curry Cut (Traditional)", "curry", NET.fish),
       cut("Steaks / Slices (Fry Cut)", "steak", NET.fish),
       cut("Cleaned Whole with Diagonal Slits", "whole", NET.fish),
     ],
@@ -84,7 +82,6 @@ export const CATALOG: CatchItem[] = [
     image: "/images/menu/mathi.jpg",
     cuts: [
       cut("Cleaned Whole with Diagonal Slits", "whole", NET.fish),
-      cut("Curry Cut (Traditional)", "curry", NET.fish),
     ],
   },
   {
@@ -100,7 +97,6 @@ export const CATALOG: CatchItem[] = [
     image: "/images/menu/kanakathi.png",
     cuts: [
       cut("Cleaned Whole with Diagonal Slits", "whole", NET.fish),
-      cut("Curry Cut (Traditional)", "curry", NET.fish),
     ],
   },
   {
@@ -130,7 +126,6 @@ export const CATALOG: CatchItem[] = [
     art: "trevally",
     image: "/images/menu/parai.png",
     cuts: [
-      cut("Curry Cut (Traditional)", "curry", NET.fish),
       cut("Steaks / Slices (Fry Cut)", "steak", NET.fish),
       cut("Cleaned Whole with Diagonal Slits", "whole", NET.fish),
     ],
@@ -148,7 +143,6 @@ export const CATALOG: CatchItem[] = [
     image: "/images/menu/vanjaram.png",
     cuts: [
       cut("Steaks / Slices (Fry Cut)", "steak", NET.fish),
-      cut("Curry Cut (Head & Tail Separate)", "curry", NET.fish),
     ],
   },
   {
@@ -164,7 +158,6 @@ export const CATALOG: CatchItem[] = [
     image: "/images/menu/koduva.jpg",
     cuts: [
       cut("Steaks / Slices (Fry Cut)", "steak", NET.fish),
-      cut("Curry Cut (Traditional)", "curry", NET.fish),
       cut("Cleaned Whole with Diagonal Slits", "whole", NET.fish),
     ],
   },
@@ -181,7 +174,6 @@ export const CATALOG: CatchItem[] = [
     image: "/images/menu/black-vavval.png",
     cuts: [
       cut("Cleaned Whole with Diagonal Slits", "whole", NET.fish),
-      cut("Curry Cut Slices", "curry", NET.fish),
     ],
   },
   {
@@ -197,7 +189,6 @@ export const CATALOG: CatchItem[] = [
     image: "/images/menu/white-vavval.png",
     cuts: [
       cut("Cleaned Whole with Diagonal Slits", "whole", NET.fish),
-      cut("Curry Cut Slices", "curry", NET.fish),
     ],
   },
   {
@@ -213,7 +204,6 @@ export const CATALOG: CatchItem[] = [
     image: "/images/menu/sheela.jpg",
     cuts: [
       cut("Steaks / Slices (Fry Cut)", "steak", NET.fish),
-      cut("Curry Cut (Traditional)", "curry", NET.fish),
     ],
   },
   {
@@ -229,7 +219,6 @@ export const CATALOG: CatchItem[] = [
     image: "/images/menu/parala.jpg",
     cuts: [
       cut("Steaks / Slices (Fry Cut)", "steak", NET.fish),
-      cut("Curry Cut (Traditional)", "curry", NET.fish),
     ],
   },
   {
@@ -245,7 +234,6 @@ export const CATALOG: CatchItem[] = [
     image: "/images/menu/thuna.jpg",
     cuts: [
       cut("Steaks / Slices (Fry Cut)", "steak", NET.fish),
-      cut("Curry Cut (Traditional)", "curry", NET.fish),
     ],
   },
   {
@@ -340,7 +328,7 @@ export const CATALOG: CatchItem[] = [
     art: "crab",
     image: "/images/menu/crab.png",
     cuts: [
-      cut("Cleaned & Halved (Shell Intact)", "curry", NET.crab),
+      cut("Cleaned & Halved (Shell Intact)", "halved", NET.crab),
       cut("Whole Cleaned", "whole", NET.crab),
     ],
   },
@@ -356,7 +344,7 @@ export const CATALOG: CatchItem[] = [
     art: "sea-crab",
     image: "/images/menu/sea-crab.jpg",
     cuts: [
-      cut("Cleaned & Halved (Shell Intact)", "curry", NET.crab),
+      cut("Cleaned & Halved (Shell Intact)", "halved", NET.crab),
       cut("Whole Cleaned", "whole", NET.crab),
     ],
   },
@@ -372,7 +360,7 @@ export const CATALOG: CatchItem[] = [
     art: "mud-crab",
     image: "/images/menu/live-mud-crab.jpg",
     cuts: [
-      cut("Cleaned & Halved (Shell Intact)", "curry", NET.crab),
+      cut("Cleaned & Halved (Shell Intact)", "halved", NET.crab),
       cut("Whole Cleaned", "whole", NET.crab),
     ],
   },
@@ -388,7 +376,7 @@ export const CATALOG: CatchItem[] = [
     art: "mud-crab",
     image: "/images/menu/mud-crab.jpg",
     cuts: [
-      cut("Cleaned & Halved (Shell Intact)", "curry", NET.crab),
+      cut("Cleaned & Halved (Shell Intact)", "halved", NET.crab),
       cut("Whole Cleaned", "whole", NET.crab),
     ],
   },

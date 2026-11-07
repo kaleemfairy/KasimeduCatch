@@ -2,7 +2,7 @@ import Image from "next/image";
 import type { CutKind } from "@/lib/catalog";
 import { asset } from "@/lib/site";
 
-// Cropped from the client's product photos. Curry cut has no photo yet.
+// Cropped from the client's product photos. Halved crab has no photo or filter.
 const PHOTOS: Partial<Record<CutKind, string>> = {
   whole: "/images/cuts/whole.jpg",
   steak: "/images/cuts/steak.jpg",

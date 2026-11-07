@@ -108,7 +108,7 @@ export function Hero() {
         <div className="grid items-end gap-8 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <h1 className="font-display text-[clamp(2.75rem,5.2vw,4.75rem)] leading-[1.02] font-bold tracking-tight text-balance uppercase">
-              Fresh from Kasimedu <span className="text-dawn">sea waves</span> to your kitchen
+              Fresh from Kasimedu <span className="text-dawn">harbour</span> to your kitchen
             </h1>
             <p className="mt-4 max-w-xl text-base text-[#DCE6F0]">
               Bought off the deep-sea trawlers at dawn, washed in RO water, cut to your order by our butchers, and delivered across Chennai within hours.
