@@ -142,7 +142,7 @@ export const CATALOG: CatchItem[] = [
     subtitle: "Seer Fish / King Fish",
     tag: "KING CATCH",
     boat: "Kasimedu Market",
-    price: 1600,
+    price: 1800,
     category: "fish",
     art: "seer",
     image: "/images/menu/vanjaram.png",
