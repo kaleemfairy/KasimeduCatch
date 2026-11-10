@@ -46,7 +46,8 @@ const NET = {
   fish: [700, 750],
   prawn: [450, 500],
   squid: [600, 650],
-  crab: [550, 650],
+  crab: [650, 750],
+  paalSura: [600, 650],
   meat: [1000, 1000],
 } satisfies Record<string, [number, number]>;
 
@@ -255,7 +256,7 @@ export const CATALOG: CatchItem[] = [
   {
     id: "thuna",
     name: "Thuna Fish",
-    tamilName: "சூரை",
+    tamilName: "கேரை மீன்",
     subtitle: "Tuna / Whole Fish",
     tag: "WHOLE FISH",
     boat: "Kasimedu Market",
@@ -310,8 +311,8 @@ export const CATALOG: CatchItem[] = [
     art: "cobia",
     image: "/images/menu/paal-sura.jpg",
     cuts: [
-      cut("Steaks / Slices (Fry Cut)", "steak", NET.fish),
-      cut("Puttu Pieces (Skin Removed)", "steak", NET.fish),
+      cut("Steaks / Slices (Fry Cut)", "steak", NET.paalSura),
+      cut("Puttu Pieces (Skin Removed)", "steak", NET.paalSura),
     ],
   },
   {
@@ -510,7 +511,7 @@ export const CATALOG: CatchItem[] = [
   {
     id: "yellowfin-tuna",
     name: "Yellowfin Tuna Boneless",
-    tamilName: "சூரை",
+    tamilName: "கேரை மீன்",
     subtitle: "Full Meat / Cubes & Slices",
     tag: "BONELESS",
     boat: "Kasimedu Market",
@@ -542,7 +543,7 @@ export const CATALOG: CatchItem[] = [
   {
     id: "thuna-cubes",
     name: "Thuna Cubes & Slices",
-    tamilName: "சூரை",
+    tamilName: "கேரை மீன்",
     subtitle: "Tuna / Ready Boneless Meat",
     tag: "BONELESS",
     boat: "Kasimedu Market",
@@ -558,7 +559,7 @@ export const CATALOG: CatchItem[] = [
   {
     id: "thuna-finger",
     name: "Thuna Fish Finger",
-    tamilName: "சூரை",
+    tamilName: "கேரை மீன்",
     subtitle: "Tuna / Ready Fish Finger",
     tag: "BONELESS",
     boat: "Kasimedu Market",
