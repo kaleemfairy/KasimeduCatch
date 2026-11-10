@@ -94,7 +94,7 @@ export function SiteHeader() {
         </div>
         <p className="free-strip">
           <Truck size={16} aria-hidden="true" className="neon-truck shrink-0" />
-          <span className="neon-text">Free delivery &amp; cleaning<span className="hidden sm:inline"> across Chennai</span></span>
+          <span className="neon-text">Free delivery across Chennai</span>
           <span className="hidden text-[#D1FAE5] sm:inline">• On every order</span>
         </p>
       </header>

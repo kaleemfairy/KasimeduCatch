@@ -3,15 +3,13 @@
 import { Search, Truck } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { CATALOG, rupees } from "@/lib/catalog";
+import { getItem, rupees } from "@/lib/catalog";
 import { CLOCK_END, CLOCK_START, CLOCK_STOPS, SLOTS, type DockNow, type SlotId, useDockNow } from "@/lib/dock";
 import { asset, ZONES } from "@/lib/site";
 import { scrollToSection, useStore } from "@/lib/store";
 
-const lowestPrice = (prefix: string) =>
-  Math.min(...CATALOG.filter((item) => item.art === prefix || item.art.endsWith(`-${prefix}`)).map((item) => item.price));
-const prawnFrom = lowestPrice("prawn");
-const crabFrom = lowestPrice("crab");
+const vanjaramWhole = getItem("vanjaram-whole");
+const vanjaramSlice = getItem("vanjaram");
 
 const position = (minutes: number) =>
   Math.min(100, Math.max(0, ((minutes - CLOCK_START) / (CLOCK_END - CLOCK_START)) * 100));
@@ -120,7 +118,7 @@ export function Hero() {
                 <strong className="neon-text block font-display text-[clamp(1.5rem,3vw,2rem)] leading-none font-bold tracking-wide uppercase">
                   Free Delivery &amp; Cleaning
                 </strong>
-                <span className="mt-1 block text-sm font-medium text-[#D1FAE5]">No delivery or cleaning charges. On every order, anywhere in Chennai.</span>
+                <span className="mt-1 block text-sm font-medium text-[#D1FAE5]">We clean and cut your fish for free, and deliver it free to your door anywhere in Chennai.</span>
               </span>
             </p>
 
@@ -155,24 +153,19 @@ export function Hero() {
           </div>
 
           <article className="overflow-hidden rounded-lg bg-deep shadow-[0_18px_40px_rgb(7_21_36/0.5)] lg:col-span-5">
-            <div className="relative grid grid-cols-2 bg-white">
-              <div className="relative aspect-[4/3]">
-                <Image src={asset("/images/menu/prawn.png")} alt="Raw prawns" fill sizes="(min-width: 1024px) 20vw, 50vw" className="object-cover" />
-              </div>
-              <div className="relative aspect-[4/3]">
-                <Image src={asset("/images/menu/crab.png")} alt="Blue crab" fill sizes="(min-width: 1024px) 20vw, 50vw" className="object-cover" />
-              </div>
+            <div className="relative aspect-[16/9]">
+              <Image src={asset("/images/hero-vanjaram.jpg")} alt="Fresh Vanjaram on ice" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
               <p className="tag absolute top-3 left-3 bg-deep text-white">{dock && !dock.hasCatch ? "Lands around 4:15 AM" : "Landed 4:15 AM Today"}</p>
             </div>
             <div className="p-5">
               <div className="flex items-start justify-between gap-4">
-                <h2 className="font-display text-2xl leading-tight font-semibold uppercase">Prawns &amp; Crabs</h2>
+                <h2 className="font-display text-2xl leading-tight font-semibold uppercase">Premium Vanjaram &amp; Seafood <span className="block text-base font-medium text-[#C4D1DE] normal-case">Seer Fish / வஞ்சிரம்</span></h2>
                 <p className="shrink-0 text-right font-display text-3xl font-semibold text-dawn tabular-nums">
-                  <span className="block font-sans text-xs font-medium text-[#C4D1DE]">prawns from</span>{rupees(prawnFrom)}<span className="block font-sans text-xs font-medium text-[#C4D1DE]">per kg gross</span>
+                  <span className="block font-sans text-xs font-medium text-[#C4D1DE]">from</span>{rupees(vanjaramWhole?.price ?? 0)}<span className="block font-sans text-xs font-medium text-[#C4D1DE]">per kg gross</span>
                 </p>
               </div>
-              <p className="mt-2 text-sm text-[#6EE7B7]">Crabs from {rupees(crabFrom)}/kg • 4 prawn sizes, peeled &amp; deveined on request</p>
-              <button type="button" onClick={() => openAuction("prawn-50-55")} className="btn btn-dawn mt-4 w-full">
+              <p className="mt-2 text-sm text-[#6EE7B7]">Whole {rupees(vanjaramWhole?.price ?? 0)}/kg • Slices {rupees(vanjaramSlice?.price ?? 0)}/kg</p>
+              <button type="button" onClick={() => openAuction("vanjaram-whole")} className="btn btn-dawn mt-4 w-full">
                 Reserve 4 AM
               </button>
             </div>

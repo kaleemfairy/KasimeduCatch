@@ -51,10 +51,10 @@ All placeholders, per the user, until replaced before launch. They live in `src/
 
 - FSSAI licence number and wharf address. The phone and WhatsApp number (+91 90809 14945) is real, from the client's menu poster.
 - "12,000+ households", the formalin test figure.
-- Item names and prices are real, from the client's menus. Latest price list: 2026-11-10 (37 items). Items not on that list (Kanakathi, Parala, Thuna, the four older prawn sizes and the Boneless Fillet tab) were kept at the user's request, at their earlier prices.
+- Item names and prices are real, from the client's menus. Latest price list: 2026-11-10 (37 items). Items not on that list (Kanakathi, Parala, Thuna, and the Boneless Fillet tab) were kept at the user's request, at their earlier prices.
 - Testimonials, which are labelled as samples on the page.
 - Net yields are the client's: fish 700-750g, prawn 450-500g, squid 600-650g, crab 550-650g per kg, the same for every cut; boneless items are ready meat. Tags, cut options and landing times are still placeholders.
-- Menu images: from the client, sources in `Images/` and `Images/New Menu Images/`, served from `public/images/menu/`. Four new images looked wrong and were not used: Vanjaram (looks like mackerel or tuna), Blue Crab (cooked), Sea Prawn (looks cooked) and Black Vavval (looks silver). Those items use earlier photos.
+- Menu images: from the client, sources in `Images/` and `Images/New Menu Images/`, served from `public/images/menu/`. Four new images looked wrong and were not used: Vanjaram (looks like mackerel or tuna), Blue Crab (cooked), and Black Vavval (looks silver). Those items use earlier photos.
 
 ## Product Principles
 
