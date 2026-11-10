@@ -159,7 +159,7 @@ export function Hero() {
             </div>
             <div className="p-5">
               <div className="flex items-start justify-between gap-4">
-                <h2 className="font-display text-2xl leading-tight font-semibold uppercase">Premium Vanjaram &amp; Seafood <span className="block text-base font-medium text-[#C4D1DE] normal-case">Seer Fish / வஞ்சிரம்</span></h2>
+                <h2 className="font-display text-2xl leading-tight font-semibold uppercase">Premium Vanjaram &amp; Seafoods <span className="block text-base font-medium text-[#C4D1DE] normal-case">Seer Fish / வஞ்சிரம்</span></h2>
                 <p className="shrink-0 text-right font-display text-3xl font-semibold text-dawn tabular-nums">
                   <span className="block font-sans text-xs font-medium text-[#C4D1DE]">from</span>{rupees(vanjaramWhole?.price ?? 0)}<span className="block font-sans text-xs font-medium text-[#C4D1DE]">per kg gross</span>
                 </p>
