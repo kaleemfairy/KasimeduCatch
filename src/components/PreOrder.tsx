@@ -131,10 +131,10 @@ export function PreOrder() {
 
       <section id="about" className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-14 lg:grid-cols-2">
         <Image
-          src={asset("/photos/kasimedu-basket.jpg")}
-          alt="A man rinsing a woven fish basket in the shallows at Kasimedu, painted boats behind him"
-          width={1400}
-          height={944}
+          src={asset("/photos/kasimedu-banner.jpg")}
+          alt="Kasimedu Catch: fresh seafood direct from Kasimedu Harbour. Fishing boats moored at the harbour."
+          width={1600}
+          height={800}
           sizes="(min-width: 1024px) 50vw, 100vw"
           className="h-auto w-full rounded-lg"
         />

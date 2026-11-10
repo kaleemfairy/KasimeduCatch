@@ -20,7 +20,7 @@ Chennai households buying fish for the day's cooking, often on a phone in the ea
 
 ## Product Purpose
 
-SSS Seafood – Kasimedu Catch sells same-day fish bought at Kasimedu Fishing Harbour at dawn, cleaned, packed on RO ice and delivered across Chennai. Success is a customer going from "what came in today?" to a filled WhatsApp order in about a minute.
+SSS Seafoods – Kasimedu Catch sells same-day fish bought at Kasimedu Fishing Harbour at dawn, cleaned, packed on RO ice and delivered across Chennai. Success is a customer going from "what came in today?" to a filled WhatsApp order in about a minute.
 
 ## Positioning
 
@@ -40,7 +40,7 @@ Fish bought off the boat at Kasimedu at 4 AM, cut to order and sold by gross wei
 
 ## Brand Commitments
 
-- Name: SSS Seafood – Kasimedu Catch.
+- Name: SSS Seafoods – Kasimedu Catch.
 - Logo: `public/images/sss-seafood-logo.png`, the supplied badge with its black background removed. Source is 640px, so a larger master is needed for print or large display.
 - Tamil labels sit beside English names throughout.
 - Palette and type are pinned by the blueprint: navy #0D253F, footer #071524, dawn orange #EA580C / #F97316 / #F57C00, sand #FBF9F3, green #059669 / #10B981, Oswald display, Plus Jakarta Sans body.

@@ -23,7 +23,7 @@ function totalLines(lines: BasketLine[]) {
 
 export function basketMessage(lines: BasketLine[], zone: string, slot: string) {
   return [
-    "*New Order from SSS Seafood Website:*",
+    "*New Order from SSS Seafoods Website:*",
     RULE,
     ...orderLines(lines),
     RULE,
@@ -45,7 +45,7 @@ export function dawnMessage(fields: {
   landing: string;
 }) {
   return [
-    "*4 AM Dawn Auction Order - SSS Seafood Website:*",
+    "*4 AM Dawn Auction Order - SSS Seafoods Website:*",
     RULE,
     `${fields.variety} - ${fields.quantity} kg (${fields.cut})`,
     RULE,
@@ -62,7 +62,7 @@ export function dispatchMessage(
   fields: { name: string; phone: string; address: string; zone: string; slot: string; notes: string },
 ) {
   return [
-    "*Harbour Pre-Order from SSS Seafood Website:*",
+    "*Harbour Pre-Order from SSS Seafoods Website:*",
     RULE,
     ...(lines.length ? [...orderLines(lines), RULE, ...totalLines(lines)] : ["Catch: Please suggest from tomorrow's landing"]),
     `Name: ${fields.name}`,

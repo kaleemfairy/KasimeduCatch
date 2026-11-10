@@ -41,8 +41,4 @@ export const PHOTO_CREDITS = [
     title: "Kasimedu Fishmarket, parking of boats",
     href: "https://commons.wikimedia.org/wiki/File:C1A5052.jpg",
   },
-  {
-    title: "Kasimedu Fishmarket, man cleaning his basket",
-    href: "https://commons.wikimedia.org/wiki/File:C1A4996.jpg",
-  },
 ];

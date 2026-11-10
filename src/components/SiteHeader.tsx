@@ -65,7 +65,7 @@ export function SiteHeader() {
           <a href="#top" className="mr-auto flex items-center gap-2.5 lg:mr-0">
             <Image src={asset("/images/sss-seafood-logo.png")} alt="" width={533} height={527} priority className="size-14 shrink-0 lg:size-16" />
             <span className="leading-tight">
-              <span className="block font-display text-xl font-semibold tracking-wide">SSS SEAFOOD</span>
+              <span className="block font-display text-xl font-semibold tracking-wide">SSS SEAFOODS</span>
               <span className="block text-[11px] font-semibold tracking-[0.08em] text-dawn">KASIMEDU CATCH</span>
             </span>
           </a>

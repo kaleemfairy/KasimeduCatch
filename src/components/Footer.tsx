@@ -15,7 +15,7 @@ export function Footer() {
     <footer className="bg-deep text-[#C4D1DE]">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 text-sm sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Image src={asset("/images/sss-seafood-logo.png")} alt="SSS Seafood, Kasimedu Catch" width={533} height={527} className="size-40" />
+          <Image src={asset("/images/sss-seafood-logo.png")} alt="SSS Seafoods, Kasimedu Catch" width={533} height={527} className="size-40" />
           <p className="mt-3">Kasimedu Catch, Chennai</p>
           <p className="mt-2 tabular-nums">FSSAI License No. {SITE.fssai}</p>
         </div>
@@ -43,7 +43,7 @@ export function Footer() {
         <div>
           <h2 className="font-display text-lg font-semibold text-white uppercase">Commercial Bulk Orders</h2>
           <p className="mt-2">Hotels, caterers and restaurants can buy direct from the morning landing.</p>
-          <a href={whatsappLink("Hello SSS Seafood, I would like to discuss a commercial bulk order.")} target="_blank" rel="noreferrer" className="mt-2 inline-block font-semibold text-dawn underline underline-offset-2">
+          <a href={whatsappLink("Hello SSS Seafoods, I would like to discuss a commercial bulk order.")} target="_blank" rel="noreferrer" className="mt-2 inline-block font-semibold text-dawn underline underline-offset-2">
             Message the bulk order desk
           </a>
         </div>
@@ -56,7 +56,7 @@ export function Footer() {
         </div>
       </div>
       <p className="mx-auto max-w-7xl border-t border-white/10 px-4 py-4 text-xs">
-        Fish images are representative. Harbour photos by Sriram Jagannathan,{" "}
+        Fish images are representative. Harbour photo by Sriram Jagannathan,{" "}
         {PHOTO_CREDITS.map((photo, index) => (
           <span key={photo.href}>
             {index > 0 && " and "}

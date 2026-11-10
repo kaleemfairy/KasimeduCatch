@@ -7,7 +7,7 @@ const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-jakart
 const tamil = Anek_Tamil({ subsets: ["tamil"], variable: "--font-tamil" });
 
 export const metadata: Metadata = {
-  title: "SSS Seafood - Kasimedu Catch, Chennai",
+  title: "SSS Seafoods - Kasimedu Catch, Chennai",
   description:
     "Fresh fish bought off the boats at Kasimedu Fishing Harbour at dawn, cut to your order, packed on RO ice and delivered across Chennai. Order on WhatsApp.",
 };
