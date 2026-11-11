@@ -3,7 +3,7 @@
 import { MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import { CATEGORIES } from "@/lib/catalog";
-import { asset, PHOTO_CREDITS, SITE } from "@/lib/site";
+import { asset, SITE } from "@/lib/site";
 import { scrollToSection, useStore } from "@/lib/store";
 import { whatsappLink } from "@/lib/whatsapp";
 
@@ -56,15 +56,7 @@ export function Footer() {
         </div>
       </div>
       <p className="mx-auto max-w-7xl border-t border-white/10 px-4 py-4 text-xs">
-        Fish images are representative. Harbour photo by Sriram Jagannathan,{" "}
-        {PHOTO_CREDITS.map((photo, index) => (
-          <span key={photo.href}>
-            {index > 0 && " and "}
-            <a href={photo.href} target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-white">{photo.title}</a>
-          </span>
-        ))}
-        ,{" "}
-        <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-white">CC BY-SA 4.0</a>.
+        © {new Date().getFullYear()} SSS Seafoods – Kasimedu Catch. All rights reserved.
       </p>
     </footer>
   );

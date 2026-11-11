@@ -36,10 +36,3 @@ export const TESTIMONIALS = [
       "The prawns were still on ice when they arrived. It saves me the early drive to the harbour on a Sunday.",
   },
 ];
-
-export const PHOTO_CREDITS = [
-  {
-    title: "Kasimedu Fishmarket, parking of boats",
-    href: "https://commons.wikimedia.org/wiki/File:C1A5052.jpg",
-  },
-];
