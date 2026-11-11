@@ -8,3 +8,7 @@ next-env.d.ts
 # Internal project notes, kept local only
 PRODUCT.md
 DESIGN.md
+
+# Never commit account recovery codes
+Github 2 factor recovery phrase/
+*recovery-codes*

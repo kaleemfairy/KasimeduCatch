@@ -1,5 +1,6 @@
 // Business facts. All of these are placeholders until the owner confirms them.
 export const SITE = {
+  url: "https://www.kasimeducatch.in",
   phoneDisplay: "+91 90809 14945",
   phoneE164: "919080914945",
   // Hidden on the site until the client confirms the licence number.
