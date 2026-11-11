@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
-// The site is served from github.io/KasimeduCatch. Set this to "" for a custom domain.
-const basePath = "/KasimeduCatch";
+// Served from the root of www.kasimeducatch.in. Use "/KasimeduCatch" to serve from github.io/KasimeduCatch instead.
+const basePath = "";
 
 const nextConfig: NextConfig = {
   output: "export",

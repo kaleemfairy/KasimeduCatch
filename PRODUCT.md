@@ -12,7 +12,7 @@ Next.js (App Router), TypeScript, Tailwind CSS, Zustand, Lucide icons. Chosen by
 
 ## Hosting
 
-GitHub Pages at https://kaleemfairy.github.io/KasimeduCatch/, deployed by `.github/workflows/deploy.yml` on each push to `main`. Static export only, so no server code or API routes.
+GitHub Pages on the client's GoDaddy domain, https://www.kasimeducatch.in/ (DNS at GoDaddy points to GitHub Pages), deployed by `.github/workflows/deploy.yml` on each push to `main`. Static export only, so no server code or API routes.
 
 ## Users
 
