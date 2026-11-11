@@ -49,7 +49,7 @@ Fish bought off the boat at Kasimedu at 4 AM, cut to order and sold by gross wei
 
 All placeholders, per the user, until replaced before launch. They live in `src/lib/site.ts` and `src/lib/catalog.ts`:
 
-- FSSAI licence number and wharf address. The phone and WhatsApp number (+91 90809 14945) is real, from the client's menu poster.
+- FSSAI licence number: hidden on the site until the client confirms it. The address is real: No. 118, PV Kovil Street, Kasimedu, Royapuram, Chennai - 600013. The phone and WhatsApp number (+91 90809 14945) is real, from the client's menu poster.
 - "12,000+ households", the formalin test figure.
 - Item names and prices are real, from the client's menus. Latest price list: 2026-11-10 (37 items). Items not on that list (Kanakathi, Parala, Thuna, and the Boneless Fillet tab) were kept at the user's request, at their earlier prices.
 - Testimonials, which are labelled as samples on the page.

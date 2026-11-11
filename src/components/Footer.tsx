@@ -17,7 +17,7 @@ export function Footer() {
         <div>
           <Image src={asset("/images/sss-seafood-logo.png")} alt="SSS Seafoods, Kasimedu Catch" width={533} height={527} className="size-40" />
           <p className="mt-3">Kasimedu Catch, Chennai</p>
-          <p className="mt-2 tabular-nums">FSSAI License No. {SITE.fssai}</p>
+          {SITE.fssai && <p className="mt-2 tabular-nums">FSSAI License No. {SITE.fssai}</p>}
         </div>
         <nav aria-label="Harbour links">
           <h2 className="font-display text-lg font-semibold text-white uppercase">Harbour Links</h2>
