@@ -48,6 +48,7 @@ const NET = {
   squid: [600, 650],
   crab: [650, 750],
   paalSura: [600, 650],
+  mathi: [650, 700],
   meat: [1000, 1000],
 } satisfies Record<string, [number, number]>;
 
@@ -82,7 +83,7 @@ export const CATALOG: CatchItem[] = [
     art: "anchovy",
     image: "/images/menu/mathi.jpg",
     cuts: [
-      cut("Cleaned Whole with Diagonal Slits", "whole", NET.fish),
+      cut("Cleaned Whole with Diagonal Slits", "whole", NET.mathi),
     ],
   },
   {
@@ -102,18 +103,19 @@ export const CATALOG: CatchItem[] = [
     ],
   },
   {
-    id: "kanakathi",
-    name: "Kanakathi Fish",
-    tamilName: "கானாங்கெளுத்தி",
-    subtitle: "Indian Mackerel / Fry & Curry",
-    tag: "DAILY PICK",
+    id: "leather-jacket",
+    name: "Leather Jacket Fish (Serupu)",
+    tamilName: "செருப்பு மீன்",
+    subtitle: "Leather Jacket / Skin-Peeled Fry Fish",
+    tag: "FRY PICK",
     boat: "Kasimedu Market",
-    price: 350,
+    price: 750,
     category: "fish",
-    art: "mackerel",
-    image: "/images/menu/kanakathi.png",
+    art: "sole",
+    image: "/images/menu/leather-jacket.jpg",
     cuts: [
-      cut("Cleaned Whole with Diagonal Slits", "whole", NET.fish),
+      cut("Skin Removed, Cleaned Whole", "whole", NET.fish),
+      cut("Steaks / Slices (Fry Cut)", "steak", NET.fish),
     ],
   },
   {
